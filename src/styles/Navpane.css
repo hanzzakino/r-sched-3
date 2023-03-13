@@ -1,0 +1,98 @@
+.nav-container {
+    background-color: var(--background-accent-primary);
+    height: 100%;
+    width: 56px;
+    position: fixed;
+    transition: 0.25s ease-out;
+    overflow: hidden;
+    border-radius: 0 var(--radius-6) var(--radius-6) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 12px 2px 12px 2px; */
+}
+.nav-container-expanded {
+    transition: 0.25s ease-out;
+    width: 280px;
+}
+.nav-container-expanded .nav-menu-item {
+    width: 240px;
+    padding: 0 16px 0 16px;
+    align-self: center !important;
+}
+.nav-container div {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 6px;
+}
+.nav-toggle {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    height: 42px;
+    width: 42px;
+    margin-left: 6px;
+
+    background: transparent;
+    color: var(--foreground-primary);
+    border: none;
+    outline: none;
+
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transform: unset;
+    transition: 0.3s ease-in-out;
+}
+.nav-toggle-expanded {
+    font-size: 1.8rem;
+    transform: rotateZ(360deg);
+    transition: 0.3s ease-in-out;
+}
+
+.nav-menu-item {
+    /* background-color: var(--background-accent-primary); */
+    color: var(--foreground-primary-75);
+    height: 40px;
+    margin: 8px;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: var(--radius-6);
+    transition: 0.2s;
+}
+.nav-container span {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 300px;
+}
+.nav-menu-item span > p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 1.1rem;
+    padding: 0;
+    margin: 3px 0 0 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.nav-menu-item span > .nav-menu-icon {
+    margin-left: 3px;
+    margin-right: 12px;
+    font-size: 1.4rem;
+}
+.nav-menu-item-selected {
+    background-color: var(--accent-1);
+    color: var(--accent-white);
+}
+.nav-separator {
+    justify-self: flex-start !important;
+    width: 70%;
+    border: 0.5px solid var(--foreground-primary-20);
+}
