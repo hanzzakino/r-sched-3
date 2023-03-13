@@ -4,13 +4,15 @@ import {
     BsBoxArrowLeft,
     BsGearFill,
     BsChevronDoubleLeft,
+    BsFillMoonFill,
+    BsFillSunFill,
 } from 'react-icons/bs'
 import { AiFillHome } from 'react-icons/ai'
 
 import { useSettingsContext } from '../context/settingsContext'
 
 export default function Navpane() {
-    const { navExpanded, currentView, toggleNav, setView } =
+    const { navExpanded, currentView, toggleNav, setView, theme, toggleTheme } =
         useSettingsContext()
     return (
         <div
@@ -45,6 +47,16 @@ export default function Navpane() {
             </div>
 
             <div>
+                <button
+                    className={
+                        'nav-toggle' +
+                        (theme === 'light' ? ' nav-toggle-expanded' : '')
+                    }
+                    onClick={toggleTheme}
+                >
+                    {theme === 'light' ? <BsFillSunFill /> : <BsFillMoonFill />}
+                </button>
+
                 <button
                     className={
                         'nav-menu-item' +

@@ -22,6 +22,10 @@ export const SettingsContextWrapper = ({ children }) => {
         setNavExpanded((prevState) => !prevState)
     }
 
+    const toggleTheme = () => {
+        setTheme((prevState) => (prevState === 'light' ? 'dark' : 'light'))
+    }
+
     const setView = (pagename, datenow = 0) => {
         switch (pagename) {
             case 'home':
@@ -44,6 +48,7 @@ export const SettingsContextWrapper = ({ children }) => {
                 theme,
                 toggleNav,
                 setView,
+                toggleTheme,
             }}
         >
             {children}

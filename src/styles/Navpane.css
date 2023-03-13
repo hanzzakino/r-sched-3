@@ -89,7 +89,7 @@
 }
 .nav-menu-item-selected {
     background-color: var(--accent-1);
-    color: var(--accent-white);
+    color: var(--color-white);
 }
 .nav-separator {
     justify-self: flex-start !important;
