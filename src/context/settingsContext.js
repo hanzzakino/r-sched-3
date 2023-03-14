@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from 'react'
 const SettingsContext = createContext()
 
 export const SettingsContextWrapper = ({ children }) => {
-    const [currentView, setCurrentView] = useState('')
+    const [currentView, setCurrentView] = useState('home')
     const [navExpanded, setNavExpanded] = useState(true)
     const [theme, setTheme] = useState('light')
 

@@ -6,7 +6,7 @@
 
 .light {
     --background-primary: #f9f7f7;
-    --background-accent-primary: #dbe2ef;
+    --background-accent-primary: #e3e5e9;
 
     --foreground-primary: rgba(0, 0, 0, 0.85);
     --foreground-primary-75: rgb(0, 0, 0, 0.75);
@@ -14,6 +14,7 @@
 
     --accent-1: #4e8fdd;
     --accent-1-hover: #366196;
+    --accent-1-foreground: #ffffff;
 
     --color-red: #e03737;
     --color-red-hover: #a91a1a;
@@ -29,8 +30,9 @@
     --foreground-primary-75: rgba(255, 255, 255, 0.65);
     --foreground-primary-20: rgba(255, 255, 255, 0.15);
 
-    --accent-1: #2678db;
-    --accent-1-hover: #006aec;
+    --accent-1: #1662be;
+    --accent-1-hover: #1056ac;
+    --accent-1-foreground: #ffffff;
 
     --color-red: #e03737;
     --color-red-hover: #a91a1a;

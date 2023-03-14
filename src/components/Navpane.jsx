@@ -49,16 +49,6 @@ export default function Navpane() {
             <div>
                 <button
                     className={
-                        'nav-toggle' +
-                        (theme === 'light' ? ' nav-toggle-expanded' : '')
-                    }
-                    onClick={toggleTheme}
-                >
-                    {theme === 'light' ? <BsFillSunFill /> : <BsFillMoonFill />}
-                </button>
-
-                <button
-                    className={
                         'nav-menu-item' +
                         (currentView === 'settings'
                             ? ' nav-menu-item-selected'
@@ -69,6 +59,17 @@ export default function Navpane() {
                     <span>
                         <BsGearFill className="nav-menu-icon" />
                         <p>Settings</p>
+                    </span>
+                </button>
+
+                <button className={'nav-menu-item'} onClick={toggleTheme}>
+                    <span>
+                        {theme === 'light' ? (
+                            <BsFillSunFill className="nav-menu-icon toggle-light" />
+                        ) : (
+                            <BsFillMoonFill className="nav-menu-icon toggle-dark" />
+                        )}
+                        <p>{theme} mode</p>
                     </span>
                 </button>
                 <hr className="nav-separator" />
